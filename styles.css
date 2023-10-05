@@ -1,0 +1,76 @@
+body{
+  width: 99vw;
+  height: 95vh;
+  box-sizing: border-box;
+  padding: 1%;
+}
+.bar{
+  width: 100%;
+  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  height: 10%;
+  box-sizing: border-box;
+}
+.barTitle{
+  display: flex;
+  justify-content: center;
+  text-align: center;
+
+  font-size: 8vmin;
+}
+.barLine{
+  border-bottom: 1px solid black;
+}
+.content{
+  margin-top: 2%;
+  box-sizing: border-box;
+  display: flex;
+  justify-content: space-between;
+  padding-top: 2%;
+  
+  height: 90%;
+}
+.inputSide{
+  box-sizing: border-box;
+  padding: 2%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+}
+.inputSideTitle{
+  justify-content: center;
+  text-align: center;
+  font-size: 5vmin;
+}
+.otherSide{
+  box-sizing: border-box;
+  padding: 2%;
+  align-content: center;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+.otherSideTitle{
+  text-align: center;
+  font-size: 5vmin;
+}
+textarea{
+
+  box-sizing: border-box;
+  max-width: 100%;
+  border-radius: 15px;
+  padding: 2%;
+}
+
+.otherRank{
+  max-height: 70%;
+  overflow: scroll;
+}
+.rankTop{
+  height: 40%;
+}
+.rankOther{
+  height: 60%;
+}

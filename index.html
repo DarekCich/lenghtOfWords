@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lenght of words</title>
+  <link rel="stylesheet" href="styles.css"></head>
+  <link rel="icon" type="image/x-icon" href="./favicon.ico">
+  <script src="./script.js"></script>
+<body>
+  <div class="bar">
+    <div class="barTitle"> 
+      Długość słów w tekście
+    </div>
+    <div class="barLine"></div>
+  </div>
+  <div class="content">
+    <div class="inputSide">
+      <div class="inputSideTitle">
+        Tekst do opracowania
+      </div>
+      <textarea id="inputArea" oninput=onInputTextArea()></textarea>
+    </div>
+    <div class="otherSide">
+      <div class="rankTop">
+        <div class="otherSideTitle">
+          Wyniki
+        </div>
+        <div class="otherSideRanking">
+          Top 3 długości
+          <ul id="Rank"></ul>
+        </div>
+      </div>
+      <div class="rankOther">
+        <div class="otherSideOthers">
+          Pozostałe
+          <div class="otherRank">
+            <ul id="otherRankList"></ul>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+  </div>
+
+</body>
+</html>
