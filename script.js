@@ -18,24 +18,22 @@ function min(a,b){
 function addToTop3(tab){
   let rank = document.getElementById('Rank')
   rank.innerHTML='';
-  for(i =0; i<min(3,tab.length); i++){
-    let row = document.createElement('li');
-    let rowDiv = document.createElement('div')
-    let number = document.createElement('div');
+  for(i =0; i<min(3, tab.length); i++){
+    let row     = document.createElement('li');
+    let number  = document.createElement('div');
     let numberNode = document.createTextNode(tab[i].length)
     number.appendChild(numberNode)
 
     let list   = document.createElement('div');
-    let listUl = document.createElement('ul');
+
+    let textTmp = '';
     tab[i].tab.forEach(el => {
-      var newItem = document.createElement("LI");
-      var textnode = document.createTextNode(el);
-      newItem.appendChild(textnode);
-      listUl.appendChild(newItem);
+      textTmp += el + ', '
     });
-    list.appendChild(listUl);
-    rowDiv.appendChild(number)
-    row.appendChild(rowDiv)
+    textTmp = textTmp.slice(0, -2);
+    let text = document.createTextNode(textTmp)
+    list.appendChild(text);
+    row.appendChild(number)
     row.appendChild(list)
     rank.appendChild(row)
   }
@@ -44,27 +42,24 @@ function addToOthers(tab){
   let rank = document.getElementById('otherRankList')
   rank.innerHTML='';
   for(i =3; i<tab.length; i++){
-    let row = document.createElement('li');
-    let rowDiv = document.createElement('div')
-    let number = document.createElement('div');
+    let row     = document.createElement('li');
+    let number  = document.createElement('div');
     let numberNode = document.createTextNode(tab[i].length)
     number.appendChild(numberNode)
 
     let list   = document.createElement('div');
-    let listUl = document.createElement('ul');
+
+    let textTmp = '';
     tab[i].tab.forEach(el => {
-      var newItem = document.createElement("LI");
-      var textnode = document.createTextNode(el);
-      newItem.appendChild(textnode);
-      listUl.appendChild(newItem);
+      textTmp += el + ', '
     });
-    list.appendChild(listUl);
-    rowDiv.appendChild(number)
-    row.appendChild(rowDiv)
+    textTmp = textTmp.slice(0, -2);
+    let text = document.createTextNode(textTmp)
+    list.appendChild(text);
+    row.appendChild(number)
     row.appendChild(list)
     rank.appendChild(row)
   }
-  console.log(rank);
 }
 function sortGroupOfTab( tab ){
   return tab.sort( (a, b)=>{
